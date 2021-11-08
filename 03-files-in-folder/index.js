@@ -8,7 +8,7 @@ fs.readdir(path.join(__dirname, 'secret-folder'), (err, files) => {
       if (err) throw err;
       if (stats.isFile()) {
         console.log(path.basename(file, path.extname(file)) + ' - ' + path.extname(file).slice(1) + ' - '
-          + stats.size/1024 + 'kb');
+          + stats.size + 'b');
       }
     });
   });
